@@ -88,7 +88,8 @@
                 <span
                   v-if="option && (option.$isLabel || option.$isDisabled)"
                   :class="optionHighlight(index, option)"
-                  class="multiselect__option multiselect__option--disabled">
+                  class="multiselect__option multiselect__option--disabled"
+                  @click.stop="emitOptionGroupClicked(option)">
                     <slot name="option" :option="option" :search="search">
                       <span>{{ getOptionLabel(option) }}</span>
                     </slot>
