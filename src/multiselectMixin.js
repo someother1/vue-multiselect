@@ -350,6 +350,9 @@ export default {
     }
   },
   methods: {
+    emitOptionGroupClicked (option) {
+      this.$emit('optionGroupClick', option)
+    },
     /**
      * Converts the internal value to the external value
      * @returns {Object||Array||String||Integer} returns the external value
